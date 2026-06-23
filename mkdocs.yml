@@ -1,0 +1,9 @@
+site_name: Portail François Gay
+
+nav:
+  - Accueil: index.md
+  - Gouverner: gouverner.md
+  - Architecturer: architecturer.md
+  - Influencer: influencer.md
+  - Capitaliser: capitaliser.md
+  - Schémathèque: schematheque.md
