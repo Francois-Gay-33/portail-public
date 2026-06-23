@@ -2,6 +2,7 @@ site_name: Portail François Gay
 
 theme:
   name: material
+  favicon: assets/favicon.png
 
 nav:
   - Accueil: index.md
