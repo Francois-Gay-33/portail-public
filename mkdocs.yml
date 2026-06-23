@@ -1,5 +1,8 @@
 site_name: Portail François Gay
 
+theme:
+  name: material
+
 nav:
   - Accueil: index.md
   - Gouverner: gouverner.md
