@@ -11,14 +11,12 @@ theme:
 
 nav:
 
-- Accueil: index.md
-  - Gouverner:
-      - Présentation: gouverner/index.md
-  - Architecturer:
-      - Présentation: architecturer/index.md
-  - Influencer:
-      - Présentation: influencer/index.md
-  - Capitaliser:
-      - Présentation: capitaliser/index.md
-  - Schémathèque:
-      - Présentation: schematheque/index.md
+
+nav:
+  - Accueil: index.md
+  - Gouverner: gouverner/index.md
+  - Architecturer: architecturer/index.md
+  - Influencer: influencer/index.md
+  - Capitaliser: capitaliser/index.md
+  - RETEX: retex/index.md
+  - Schémathèque: schematheque/index.md
