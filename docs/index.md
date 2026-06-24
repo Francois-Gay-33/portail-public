@@ -41,6 +41,12 @@ La réussite repose alors sur la capacité à structurer la complexité, rendre 
 
 ---
 
+
+
+> La connaissance explique les concepts. L'expérience permet de les appliquer. Le RETEX démontre qu'ils fonctionnent. La capitalisation permet de les réutiliser.
+
+---
+
 ## Explorer le contenu
 
 ### Gouverner
