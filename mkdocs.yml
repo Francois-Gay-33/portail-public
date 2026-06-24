@@ -1,13 +1,24 @@
-site_name: Portail François Gay
+
+site_name: Piloter la complexité technique
+site_description: Gouvernance, architecture, pilotage et retours d'expérience
+site_author: François Gay
+
 
 theme:
   name: material
+  language: fr
   favicon: assets/favicon.png
 
 nav:
-  - Accueil: index.md
-  - Gouverner: gouverner.md
-  - Architecturer: architecturer.md
-  - Influencer: influencer.md
-  - Capitaliser: capitaliser.md
-  - Schémathèque: schematheque.md
+
+- Accueil: index.md
+  - Gouverner:
+      - Présentation: gouverner/index.md
+  - Architecturer:
+      - Présentation: architecturer/index.md
+  - Influencer:
+      - Présentation: influencer/index.md
+  - Capitaliser:
+      - Présentation: capitaliser/index.md
+  - Schémathèque:
+      - Présentation: schematheque/index.md
