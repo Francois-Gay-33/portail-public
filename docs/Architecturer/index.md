@@ -113,3 +113,40 @@ L'objectif est de permettre à tous les acteurs — exploitants, architectes, ch
 
 Les schémas ne sont jamais une finalité.
 
+---
+
+## 6. Comprendre le langage des experts
+
+> **Les systèmes sont complexes. Les conversations le sont parfois davantage.**
+
+Chaque domaine possède son vocabulaire, ses acronymes, ses habitudes et ses références implicites.
+
+Entre les exploitants, les architectes, les développeurs, les réseaux, les administrateurs système, les experts sécurité ou les éditeurs de progiciels, un même sujet peut être décrit de plusieurs façons.
+
+Architecturer ne consiste pas seulement à comprendre les composants techniques. Il faut également comprendre le langage de ceux qui les conçoivent, les exploitent et les maintiennent.
+
+Cette phase d'acculturation est indispensable pour :
+
+- Éviter les malentendus
+- Détecter les hypothèses implicites
+- Identifier les vraies contraintes
+- Faciliter les arbitrages
+- Traduire les enjeux techniques en langage décisionnel
+
+L'architecte agit souvent comme un traducteur entre plusieurs communautés d'expertise.
+
+Une partie importante du travail consiste à transformer :
+
+- des acronymes en concepts ;
+- des concepts en schémas ;
+- des schémas en décisions compréhensibles.
+
+---
+
+> **Derrière chaque jargon se cache généralement une contrainte ou une expérience acquise.**
+
+Avant de remettre en cause une solution technique, il faut comprendre pourquoi elle existe, quel problème elle résout et dans quel contexte elle a été construite.
+
+L'architecture est autant un exercice d'écoute que de modélisation.
+
+
