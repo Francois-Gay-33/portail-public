@@ -3,11 +3,19 @@
 
 # Piloter la complexité technique
 
-> **Faire complexe est simple. Faire simple est beaucoup plus compliqué.**
+> **Faire complexe est facile. Faire simple est beaucoup plus difficile.**
 >
-> Toute la valeur d'un projet réside dans sa capacité à transformer une réalité complexe en décisions compréhensibles, en actions concrètes et en résultats mesurables.
+> Toute la valeur d'un projet réside dans sa capacité à transformer une réalité complexe en décisions compréhensibles, en actions concrètes et en résultats mesurables. Pour y parvenir, il est essentiel de rendre la complexité lisible. C'est pourquoi je privilégie systématiquement le management visuel, les schémas, les indicateurs et les représentations partagées.
 
 ---
+
+> **Cadencer au rythme adapté.**
+>
+> Trop vite, les équipes s'épuisent. Trop lentement, la dynamique se perd. L'enjeu consiste à trouver le rythme juste pour avancer durablement, maintenir l'engagement et sécuriser le delivery. Cette cadence n'est jamais figée : elle doit être ajustée en fonction du niveau de risque, des enjeux et du degré d'urgence du projet.
+
+---
+
+
 
 ## Pourquoi ce site ?
 
@@ -71,7 +79,7 @@ Retrouver une bibliothèque de schémas d'architecture, de gouvernance, d'organi
 
 ---
 
-## Ce que vous trouverez ici
+## Ce que je compte retrouver ici
 
 - ✅ Des retours d'expérience réels
 - ✅ Des méthodes directement applicables
