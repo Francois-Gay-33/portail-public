@@ -150,3 +150,6 @@ Avant de remettre en cause une solution technique, il faut comprendre pourquoi e
 L'architecture est autant un exercice d'écoute que de modélisation.
 
 
+---
+
+
