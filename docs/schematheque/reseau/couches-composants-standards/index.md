@@ -15,7 +15,6 @@ Il constitue un support pédagogique permettant de :
 ---
 
 ## Schéma
-
 schema.svg
 
 ---
