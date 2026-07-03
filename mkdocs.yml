@@ -19,4 +19,8 @@ nav:
   - Influencer: influencer/index.md
   - Capitaliser: capitaliser/index.md
   - RETEX: retex/index.md
-  - Schémathèque: schematheque/index.md
+  - Schémathèque:
+      - Accueil: schematheque/index.md
+      - Réseau:
+          - Couches, composants et standards:
+              schematheque/reseau/couches-composants-standards/index.md
