@@ -16,7 +16,7 @@ Il constitue un support pédagogique permettant de :
 
 ## Schéma
 
-<img src="schema.svg" alt="Couches, composants et standards
+schema.svg
 
 ---
 
