@@ -15,7 +15,7 @@ Il constitue un support pédagogique permettant de :
 ---
 
 ## Schéma
-<schema.svg
+![Schéma couches composants standards](schema.svg)
 
 ---
 
