@@ -178,3 +178,10 @@ Si ce type de projet devait être repris aujourd’hui, les actions suivantes se
 
 ---
 
+## Citation RETEX
+
+> La vitesse de traitement des blocages est souvent plus importante que la qualité du planning initial.
+
+
+---
+
