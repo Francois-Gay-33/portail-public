@@ -1,9 +1,9 @@
 
-# RETEX – Reprise et sécurisation d’un projet MFA avec LemonLDAP
+# RETEX – Reprise et sécurisation d’un projet MFA
 
 ## Résumé
 
-Ce retour d’expérience porte sur la reprise d’un projet de mise en œuvre de l’authentification multifacteur avec LemonLDAP.
+Ce retour d’expérience porte sur la reprise d’un projet de mise en œuvre de l’authentification multifacteur.
 
 Le projet répondait à un besoin fort de conformité et de sécurisation des accès aux applications critiques exposées ainsi qu’au Bureau Retraite.
 
