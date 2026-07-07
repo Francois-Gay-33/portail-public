@@ -53,11 +53,6 @@ Le projet a nécessité de faire avancer les travaux sans autorité hiérarchiqu
 
 ---
 
-## Schéma de synthèse
-
-schema.svg
-
----
 
 ## Difficultés rencontrées
 
