@@ -1,1 +1,92 @@
 
+titre: "Reprise et sécurisation d’un projet MFA avec LemonLDAP"
+
+slug: "mfa-lemonldap"
+
+categorie: "RETEX"
+
+domaine:
+  - Sécurité
+  - IAM
+  - Authentification
+  - Pilotage de projet
+  - Reprise de projet
+
+technologies:
+  - LemonLDAP
+  - MFA
+  - SSO
+  - IAM
+  - VLAN
+
+contexte: >
+  Projet de déploiement de l’authentification multifacteur sur des
+  applications critiques exposées et sur l’accès au Bureau Retraite.
+  Le sujet répondait à des besoins de conformité et de renforcement
+  de la sécurité.
+
+enjeu: >
+  Livrer un dispositif MFA dans un calendrier imposé, malgré un cadrage
+  initial incomplet, des jalons peu justifiés, des ressources d’architecture
+  absentes et plusieurs dépendances techniques non stabilisées.
+
+role: >
+  Responsable de projet, orchestrateur transverse et architecte de facto.
+  Coordination des équipes sécurité, infrastructure, exploitation et
+  applicatives. Animation du dispositif de pilotage et traitement des
+  blocages opérationnels.
+
+resultats:
+  - Déploiement du MFA sur les applications critiques ciblées.
+  - Sécurisation de l’accès au Bureau Retraite.
+  - Respect du calendrier imposé.
+  - Livraison malgré l’absence des ressources d’architecture initialement demandées.
+  - Montée en compétence sur les sujets IAM et les protocoles d’authentification.
+
+difficultes:
+  - Cadrage initial insuffisant.
+  - Jalons hérités peu réalistes ou peu justifiés.
+  - Développements spécifiques non prévus au cahier des charges.
+  - Absence d’équipe de développement clairement affectée.
+  - Dépendance forte à un sachant unique sur les zones VLAN.
+  - Retard dans l’identification des zones d’implémentation.
+  - Manque d’appui hiérarchique direct.
+
+ce_qui_a_fonctionne:
+  - Passage d’un pilotage hebdomadaire classique à un mode task-force.
+  - Mise en place de dailies quotidiennes.
+  - Déblocage point à point sous 24 heures.
+  - Appui sur des relais d’influence plutôt que sur l’autorité hiérarchique.
+  - Pilotage rapproché des dépendances critiques.
+
+enseignements:
+  - La principale difficulté était organisationnelle plus que technique.
+  - Un projet mal cadré doit être diagnostiqué rapidement avant d’être exécuté.
+  - Les SPOF doivent être identifiés dès la reprise du sujet.
+  - Le mode task-force doit être activé dès que le niveau d’incertitude est élevé.
+  - La contribution réelle doit être rendue visible, car la reconnaissance n’est pas automatique.
+
+si_c_etait_a_refaire:
+  - Réaliser un diagnostic flash dès la prise en charge du projet.
+  - Cartographier les dépendances critiques dès le démarrage.
+  - Identifier immédiatement les sachants uniques et les zones de fragilité.
+  - Challenger les jalons sans contester frontalement le cadrage.
+  - Basculer plus tôt en mode task-force.
+  - Clarifier les besoins de développement avant engagement sur le calendrier.
+
+citation_retex: >
+  La vitesse de traitement des blocages est souvent plus importante
+  que la qualité du planning initial.
+
+mots_cles:
+  - MFA
+  - LemonLDAP
+  - IAM
+  - SSO
+  - Authentification forte
+  - Reprise de projet
+  - Task-force
+  - Pilotage transverse
+  - SPOF
+  - VLAN
+  - Conformité
