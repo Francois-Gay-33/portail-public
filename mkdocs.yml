@@ -17,7 +17,9 @@ nav:
   - Gouverner: gouverner/index.md
   - Architecturer: architecturer/index.md
   - Influencer: influencer/index.md
-  - Capitaliser: capitaliser/index.md
+  - Capitaliser:
+      - Acceuil: capitaliser/index.md
+      - Visualiser, tracer, piloter : capitaliser/visualiser-tracer-piloter/index.md
   - RETEX: retex/index.md
   - Schémathèque:
       - Accueil: schematheque/index.md
