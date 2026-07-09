@@ -1,4 +1,3 @@
-
 site_name: Piloter la complexité technique
 site_description: Gouvernance, architecture, pilotage et retours d'expérience
 site_author: François Gay
@@ -9,11 +8,9 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
-
           
 extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js
-
 
 theme:
   name: material
