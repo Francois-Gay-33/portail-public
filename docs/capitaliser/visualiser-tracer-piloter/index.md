@@ -75,7 +75,10 @@ Je considère qu'un projet ne se pilote pas uniquement par des réunions ou des 
 
 Les actions, décisions, risques et dépendances doivent être visibles, suivis et arbitrables.
 
-> Un projet sans traçabilité produit souvent une illusion de pilotage et un mode héroique renforcé
+
+!!! quote
+
+    Un projet sans traçabilité produit souvent une illusion de pilotage et favorise un mode héroïque où la réussite dépend davantage des individus que du système.
 
 
 ```mermaid
@@ -101,10 +104,35 @@ flowchart TD
     style R1 fill:#F8D7DA,stroke:#D9534F,color:#000
     style R2 fill:#F8D7DA,stroke:#D9534F,color:#000
     style R3 fill:#F8D7DA,stroke:#D9534F,color:#000
+```
 
 
+## D'où vient cette approche
 
+L'un de mes premiers retours d'expérience mettait en évidence un constat simple :
+de nombreuses actions étaient réalisées à travers des échanges informels :
 
+- mails ;
+- appels téléphoniques ;
+- conversations de couloir ;
+- réunions ;
+- messages Teams.
+
+Ces échanges permettaient souvent de résoudre un problème immédiat mais produisaient également des effets de bord :
+
+- perte de traçabilité ;
+- incompréhensions ;
+- réinterprétations ;
+- oublis ;
+- difficultés de planification ;
+- anomalies découvertes tardivement.
+
+Ce retour d'expérience a renforcé une conviction que j'avais déjà développée sur d'autres missions :
+
+> Une organisation ne peut pas piloter durablement ce qu'elle ne rend ni visible ni traçable.
+
+Depuis, j'applique systématiquement cette logique sur les sujets qui me sont confiés :
+comprendre, représenter, tracer, piloter, clore.
 
 
 
