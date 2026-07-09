@@ -55,3 +55,26 @@ flowchart LR
     style G fill:#E6F4EA,stroke:#2E7D32,stroke-width:2px,color:#000
     style I fill:#EFE7FD,stroke:#7E57C2,stroke-width:2px,color:#000
 
+```
+
+## Pourquoi je trace les actions
+
+Le ticketing, le backlog, le carnet de commande, la WBS ( SDP ) ou le plan d'actions ne sont pas une contrainte administrative. Ils permettent de transformer des intentions en éléments pilotables
+
+Cette traçabilité permet :
+
+- de gérer les carnets de commandes ;
+- de planifier la charge ;
+- de distinguer le réalisé du reste à faire ;
+- d'objectiver l'avancement ;
+- de faciliter les arbitrages ;
+- de conserver une mémoire réutilisable.
+- Facilité la continuité du pilotage pour de potentiel back-up.
+
+Je considère qu'un projet ne se pilote pas uniquement par des réunions ou des échanges informels.
+
+Les actions, décisions, risques et dépendances doivent être visibles, suivis et arbitrables.
+
+> Un projet sans traçabilité produit souvent une illusion de pilotage.
+
+
