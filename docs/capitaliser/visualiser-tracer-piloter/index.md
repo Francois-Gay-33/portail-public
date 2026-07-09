@@ -75,6 +75,64 @@ Je considère qu'un projet ne se pilote pas uniquement par des réunions ou des 
 
 Les actions, décisions, risques et dépendances doivent être visibles, suivis et arbitrables.
 
-> Un projet sans traçabilité produit souvent une illusion de pilotage.
+> Un projet sans traçabilité produit souvent une illusion de pilotage et un mode héroique renforcé
+
+
+```mermaid
+
+flowchart TD
+
+    A["Demande informelle<br/>mail, Teams, réunion"] --> B["Action formalisée"]
+    B --> C["Responsable identifié"]
+    C --> D["Priorité définie"]
+    D --> E["Suivi d'avancement"]
+    E -- Compléter --> B
+    E --> F["Clôture tracée"]
+    F --> G["Capitalisation"]
+
+    A -. risque .-> R1["Perte de visibilité"]
+    A -. risque .-> R2["Charge non planifiée"]
+    A -. risque .-> R3["Engagement flou"]
+
+    style A fill:#FCE4E4,stroke:#D9534F,stroke-width:2px,color:#000
+    style B fill:#FFF4CC,stroke:#F0AD4E,stroke-width:2px,color:#000
+    style E fill:#E3F2FD,stroke:#1976D2,stroke-width:2px,color:#000
+    style G fill:#E6F4EA,stroke:#2E7D32,stroke-width:2px,color:#000
+    style R1 fill:#F8D7DA,stroke:#D9534F,color:#000
+    style R2 fill:#F8D7DA,stroke:#D9534F,color:#000
+    style R3 fill:#F8D7DA,stroke:#D9534F,color:#000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
