@@ -21,9 +21,6 @@ theme:
   favicon: assets/favicon.png
 
 nav:
-
-
-nav:
   - Accueil: index.md
   - Architecturer: architecturer/index.md
   - Capitaliser:
