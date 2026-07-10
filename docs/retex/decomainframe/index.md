@@ -10,14 +10,14 @@ tags:
   - Gouvernance
   - Pilotage
   - Décommissionnement
-image: /images/retex-mainframe-timeline.png
+image: retex-mainframe-timeline.svg
 ---
 
 # RETEX – Décommissionnement du Mainframe
 
 > **10 ans de transformation, un objectif : éteindre durablement l'héritage.**
 
-!(retex-mainframe-timeline.svg)
+![Vue synthétique du RETEX Mainframe](retex-mainframe-timeline.svg)
 
 ## Résumé exécutif
 
