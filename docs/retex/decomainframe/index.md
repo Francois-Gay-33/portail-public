@@ -72,7 +72,7 @@ Ce projet a constitué une première école de la gestion des migrations complex
 ---
 
 ## 2018 – 2021
-### Migration RNI : DB2 → PostgreSQL (2To) 
+### Migration RNI : DB2 → PostgreSQL (2To, 140 tables) 
 
 Deuxième grande étape de la trajectoire.
 
@@ -96,7 +96,7 @@ Une partie du processus de generagtion des DDL reposait sur des traitements manu
 ---
 
 ## 2022 – 2024
-### Migration RNGD : DB2 → PostgreSQL  (20 To) 
+### Migration RNGD : DB2 → PostgreSQL  (20 To, 330 tables ) 
 
 Cette phase constitue probablement le tournant du programme. L'analyse initiale montrait qu'une migration globale était trop risquée.
 La solution retenue a été de décomposer le problème en plusieurs sous-projets autonomes.
