@@ -33,15 +33,11 @@ L'objectif n'était pas de réaliser une simple migration technique. Il s'agissa
 
 Cette trajectoire a permis :
 
-✅ la migration progressive des référentiels critiques DB2 vers PostgreSQL ;
-
-✅ l'extinction des composants Mainframe les plus sensibles ;
-
-✅ la mise en place d'une stratégie d'historisation pérenne ;
-
-✅ une économie annuelle estimée entre **9 et 10 M€** ;
-
-✅ l'extinction définitive du Mainframe en **2026**.
+✔ la migration progressive des référentiels critiques DB2 vers PostgreSQL ;
+✔ l'extinction des composants Mainframe les plus sensibles ;
+✔ la mise en place d'une stratégie d'historisation pérenne ;
+✔ une économie annuelle estimée entre **9 et 10 M€** ;
+✔ l'extinction définitive du Mainframe en **2026**.
 
 ---
 
@@ -50,25 +46,19 @@ Cette trajectoire a permis :
 ## 2015 – 2017
 ### Migration DROIT vers RNGD (DB2)
 
-Premier chantier structurant.
-
-Cette migration m'a permis de construire les premiers outils de pilotage qui serviront ensuite de modèle pour les programmes suivants :
+Premier chantier structurant. Cette migration m'a permis de construire les premiers outils de pilotage qui serviront ensuite de modèle pour les programmes suivants :
 
 - chronogramme industriel ;
-- déroulement nominal ;
-- scénarios de repli ;
+- déroulement nominal + scénarios de repli ;
 - annuaire des parties prenantes ;
 - journal des incidents ;
 - plan de communication.
 
 ### Défis techniques
 
-Les données circulaient entre plusieurs environnements utilisant différents encodages :
-
-- EBCDIC ;
-- UTF-8 ;
-- ISO Latin.
-
+Les données circulaient entre plusieurs environnements utilisant différents encodages : EBCDIC, UTF-8, ISO Latin.
+Une durée de chargement de plusieur mois necessitant un chargement itiale ( date du pivot ) puis un rattrapage des delats sur trois mois.
+Une orchestration avec les 9 SI formant les sources de données ( AG2R, Humanis, Klesia, ... ) 
 Ce projet a constitué une première école de la gestion des migrations complexes et de la coordination multi-sites.
 
 ### Enseignement majeur
@@ -78,7 +68,7 @@ Ce projet a constitué une première école de la gestion des migrations complex
 ---
 
 ## 2018 – 2021
-### Migration RNI : DB2 → PostgreSQL
+### Migration RNI : DB2 → PostgreSQL (2To) 
 
 Deuxième grande étape de la trajectoire.
 
@@ -90,13 +80,10 @@ permettant de synchroniser progressivement les données entre DB2 et PostgreSQL.
 
 ### Difficultés rencontrées
 
-Une partie du processus reposait sur des traitements manuels qui généraient de nombreuses erreurs lors des itérations successives.
-
-Pour sécuriser la migration, j'ai développé des outils VBA permettant :
+Une partie du processus de generagtion des DDL reposait sur des traitements manuels qui généraient de nombreuses erreurs lors des itérations successives. Pour sécuriser la migration, j'ai développé des outils VBA permettant :
 
 - d'automatiser certaines transformations ;
-- d'ajouter les RTRIM nécessaires ;
-- de gérer les conversions CHAR → VARCHAR.
+- d'ajouter les RTRIM nécessaires lors des conversions CHAR → VARCHAR.
 
 ### Enseignement majeur
 
@@ -105,12 +92,9 @@ Pour sécuriser la migration, j'ai développé des outils VBA permettant :
 ---
 
 ## 2022 – 2024
-### Migration RNGD : DB2 → PostgreSQL
+### Migration RNGD : DB2 → PostgreSQL  (20 To) 
 
-Cette phase constitue probablement le tournant du programme.
-
-L'analyse initiale montrait qu'une migration globale était trop risquée.
-
+Cette phase constitue probablement le tournant du programme. L'analyse initiale montrait qu'une migration globale était trop risquée.
 La solution retenue a été de décomposer le problème en plusieurs sous-projets autonomes.
 
 ### Lot 1
