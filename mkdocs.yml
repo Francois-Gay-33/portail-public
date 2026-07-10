@@ -22,7 +22,8 @@ nav:
   - Architecturer: architecturer/index.md
   - Capitaliser:
       - Visualiser, tracer, piloter : capitaliser/visualiser-tracer-piloter/index.md
-  - RETEX: retex/index.md
+  - RETEX:
+      - Décommissionnement Mainframe : retex/decomainframe/index.md 
   - Schémathèque:
       - Accueil: schematheque/index.md
       - Réseau:
