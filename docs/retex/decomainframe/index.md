@@ -17,7 +17,7 @@ image: /images/retex-mainframe-timeline.png
 
 > **10 ans de transformation, un objectif : éteindre durablement l'héritage.**
 
-![Programme de décommissionnement du Mainframe](/images/retex-mainframe-timeline.png)
+!(retex-mainframe-timeline.svg)
 
 ## Résumé exécutif
 
