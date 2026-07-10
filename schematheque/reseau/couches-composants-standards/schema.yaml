@@ -1,0 +1,88 @@
+
+id: couches-composants-standards
+
+titre: Couches, composants et standards associés
+
+version: 1.0
+
+auteur: François Gay
+
+date_creation: 2026-07-03
+
+categorie:
+  - Architecture
+  - Réseau
+  - Fondamentaux
+
+tags:
+  - OSI
+  - TCP/IP
+  - Réseau
+  - Protocoles
+  - Standards
+  - Architecture
+
+objectif: >
+  Présenter les couches du modèle OSI, les composants
+  généralement associés et les standards ou protocoles
+  les plus couramment rencontrés.
+
+public:
+  - Chef de projet
+  - Architecte
+  - Exploitation
+  - Production
+
+niveau:
+  - Débutant
+  - Intermédiaire
+
+fichiers:
+  documentation: index.md
+  schema: schema.svg
+
+references:
+  - Modèle OSI
+  - Modèle TCP/IP
+  - RFC IETF
+
+couches:
+  - numero: 7
+    nom: Application
+
+  - numero: 6
+    nom: Présentation
+
+  - numero: 5
+    nom: Session
+
+  - numero: 4
+    nom: Transport
+
+  - numero: 3
+    nom: Réseau
+
+  - numero: 2
+    nom: Liaison de données
+
+  - numero: 1
+    nom: Physique
+
+    
+liens:
+  - protocoles-reseau
+  - modele-tcp-ip
+  - matrice-de-flux
+  - securite-reseau
+
+mots_cles:
+  - HTTP
+  - DNS
+  - TCP
+  - UDP
+  - IPv4
+  - Ethernet
+  - TLS
+
+
+

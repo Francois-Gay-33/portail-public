@@ -1,0 +1,1031 @@
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Gouvernance, architecture, pilotage et retours d'expérience">
+      
+      
+        <meta name="author" content="François Gay">
+      
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>RETEX – Reprise et sécurisation d’un projet MFA - Piloter la complexité technique</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#retex-reprise-et-securisation-dun-projet-mfa" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href="../../../.." title="Piloter la complexité technique" class="md-header__button md-logo" aria-label="Piloter la complexité technique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Piloter la complexité technique
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RETEX – Reprise et sécurisation d’un projet MFA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Piloter la complexité technique" class="md-nav__button md-logo" aria-label="Piloter la complexité technique" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Piloter la complexité technique
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../architecturer/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecturer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Capitaliser
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Capitaliser
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../capitaliser/visualiser-tracer-piloter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualiser, tracer, piloter
+  
+
+    
+  </span>
+  
+  
+    
+  
+  
+    <span class="md-status md-status--published"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RETEX
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    RETEX
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../decomainframe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Décommissionnement Mainframe
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schémathèque
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Schémathèque
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../schematheque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Accueil
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Réseau
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Réseau
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../schematheque/reseau/couches-composants-standards/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Couches, composants et standards
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#resume" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Résumé
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contexte" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Contexte
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enjeux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enjeux
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role-tenu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rôle tenu
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difficultes-rencontrees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Difficultés rencontrées
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Difficultés rencontrées">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cadrage-initial-incomplet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cadrage initial incomplet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#developpements-hors-perimetre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Développements hors périmètre
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependance-a-un-sachant-unique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dépendance à un sachant unique
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#absence-dappui-hierarchique-fort" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Absence d’appui hiérarchique fort
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#changement-de-methode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Changement de méthode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultats-obtenus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Résultats obtenus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enseignements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enseignements
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Enseignements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-un-projet-mal-cadre-doit-dabord-etre-diagnostique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Un projet mal cadré doit d’abord être diagnostiqué
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-le-reporting-ne-suffit-pas-a-redresser-un-projet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Le reporting ne suffit pas à redresser un projet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-les-spof-doivent-etre-traites-des-le-demarrage" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Les SPOF doivent être traités dès le démarrage
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-linfluence-peut-compenser-labsence-dautorite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. L’influence peut compenser l’absence d’autorité
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-la-reconnaissance-ne-suit-pas-toujours-la-contribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. La reconnaissance ne suit pas toujours la contribution
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ce-que-je-referais-differemment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ce que je referais différemment
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation-retex" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Citation RETEX
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="retex-reprise-et-securisation-dun-projet-mfa">RETEX – Reprise et sécurisation d’un projet MFA</h1>
+<h2 id="resume">Résumé</h2>
+<p>Ce retour d’expérience porte sur la reprise d’un projet de mise en œuvre de l’authentification multifacteur.</p>
+<p>Le projet répondait à un besoin fort de conformité et de sécurisation des accès aux applications critiques exposées ainsi qu’au Bureau Retraite.</p>
+<p>La principale difficulté n’a pas été uniquement technique. Elle a surtout porté sur la reprise d’un sujet insuffisamment cadré, avec un calendrier déjà imposé, des dépendances techniques mal stabilisées et des ressources d’architecture non affectées.</p>
+<hr />
+<h2 id="contexte">Contexte</h2>
+<p>Le projet visait à déployer une authentification forte sur plusieurs périmètres critiques.</p>
+<p>Le sujet avait déjà connu une phase de préparation, mais sans cadrage opérationnel suffisamment robuste. Lorsque le projet a été repris, plusieurs éléments structurants restaient à stabiliser :</p>
+<ul>
+<li>jalons peu justifiés ;</li>
+<li>hypothèses d’architecture encore mouvantes ;</li>
+<li>dépendances techniques mal identifiées ;</li>
+<li>besoin de développements spécifiques non prévus, ajout de la monté de version France connect V2 ;</li>
+<li>absence des ressources d’architecture initialement demandées.</li>
+</ul>
+<hr />
+<h2 id="enjeux">Enjeux</h2>
+<p>Les principaux enjeux étaient les suivants :</p>
+<ul>
+<li>répondre aux exigences de conformité ;</li>
+<li>renforcer la sécurité des applications critiques ;</li>
+<li>tenir un calendrier imposé ;</li>
+<li>éviter toute interruption de service ;</li>
+<li>coordonner des acteurs techniques multiples sans appui hiérarchique fort.</li>
+</ul>
+<hr />
+<h2 id="role-tenu">Rôle tenu</h2>
+<p>Le rôle exercé a dépassé le pilotage projet classique.</p>
+<p>Il a combiné plusieurs dimensions :</p>
+<ul>
+<li>responsable de projet ;</li>
+<li>orchestrateur transverse ;</li>
+<li>coordinateur des équipes sécurité, infrastructure, exploitation et applicatives ;</li>
+<li>architecte de facto sur certains sujets ;</li>
+<li>facilitateur dans la résolution des blocages.</li>
+</ul>
+<p>Le projet a nécessité de faire avancer les travaux sans autorité hiérarchique directe, en s’appuyant sur des relais d’influence et sur une forte proximité opérationnelle avec les équipes.</p>
+<hr />
+<h2 id="difficultes-rencontrees">Difficultés rencontrées</h2>
+<h3 id="cadrage-initial-incomplet">Cadrage initial incomplet</h3>
+<p>Le projet avait été engagé sur la base d’un calendrier déjà fixé, mais avec un cadrage insuffisamment stabilisé.</p>
+<p>Certaines hypothèses n’étaient pas assez documentées, notamment sur les zones d’implémentation, les dépendances d’infrastructure et les besoins de personnalisation.</p>
+<h3 id="developpements-hors-perimetre">Développements hors périmètre</h3>
+<p>Des demandes de customisation sont apparues en cours de projet alors qu’elles n’étaient pas présentes dans le cahier des charges initial.</p>
+<p>Cette situation a généré une tension supplémentaire, car aucune équipe de développement dédiée n’était clairement affectée.</p>
+<h3 id="dependance-a-un-sachant-unique">Dépendance à un sachant unique</h3>
+<p>Le projet dépendait fortement d’un expert unique sur certains sujets d’infrastructure, notamment les zones VLAN et le cycle de vie des environnements.</p>
+<p>Cette dépendance a créé une fragilité décisionnelle, des changements d’orientation et une perte de temps significative.</p>
+<h3 id="absence-dappui-hierarchique-fort">Absence d’appui hiérarchique fort</h3>
+<p>Le projet a dû avancer sans appui direct du N+1 ou du N+2.</p>
+<p>La progression s’est donc appuyée davantage sur l’influence, les relais opérationnels et la résolution concrète des problèmes que sur l’autorité formelle.</p>
+<hr />
+<h2 id="changement-de-methode">Changement de méthode</h2>
+<p>Le pilotage initial reposait sur un fonctionnement classique, avec des points hebdomadaires.</p>
+<p>Ce mode n’était pas adapté au niveau d’incertitude et au nombre de blocages rencontrés.</p>
+<p>Le dispositif a donc été transformé en mode task-force :</p>
+<ul>
+<li>points quotidiens ;</li>
+<li>traitement des blocages sous 24 heures ;</li>
+<li>arbitrages point à point ;</li>
+<li>coordination rapprochée des acteurs ;</li>
+<li>suivi opérationnel très court terme.</li>
+</ul>
+<p>Ce changement de rythme a permis de remettre le projet en mouvement et de sécuriser la livraison.</p>
+<hr />
+<h2 id="resultats-obtenus">Résultats obtenus</h2>
+<p>Les principaux résultats obtenus sont les suivants :</p>
+<ul>
+<li>déploiement du MFA sur les applications critiques ciblées ;</li>
+<li>sécurisation de l’accès au Bureau Retraite ;</li>
+<li>respect du calendrier imposé (livré été 2025) ;</li>
+<li>livraison malgré l’absence de certaines ressources clés ;</li>
+<li>montée en compétence sur les sujets IAM, MFA, SSO et protocoles d’authentification.</li>
+</ul>
+<hr />
+<h2 id="enseignements">Enseignements</h2>
+<h3 id="1-un-projet-mal-cadre-doit-dabord-etre-diagnostique">1. Un projet mal cadré doit d’abord être diagnostiqué</h3>
+<p>Lorsqu’un projet est repris en cours de route, il ne faut pas se contenter d’exécuter le planning existant.</p>
+<p>Il faut rapidement identifier :</p>
+<ul>
+<li>les hypothèses implicites ;</li>
+<li>les dépendances réelles ;</li>
+<li>les risques non visibles ;</li>
+<li>les acteurs clés ;</li>
+<li>les points de fragilité.</li>
+</ul>
+<h3 id="2-le-reporting-ne-suffit-pas-a-redresser-un-projet">2. Le reporting ne suffit pas à redresser un projet</h3>
+<p>Un projet en difficulté ne se redresse pas par davantage de comités ou de reporting.</p>
+<p>Il se redresse par :</p>
+<ul>
+<li>la proximité terrain ;</li>
+<li>le traitement rapide des blocages ;</li>
+<li>la clarification des responsabilités ;</li>
+<li>la réduction du temps entre problème et décision.</li>
+</ul>
+<h3 id="3-les-spof-doivent-etre-traites-des-le-demarrage">3. Les SPOF doivent être traités dès le démarrage</h3>
+<p>La dépendance à un sachant unique constitue un risque majeur.</p>
+<p>Elle doit être identifiée dès les premières semaines et faire l’objet d’un plan de sécurisation.</p>
+<h3 id="4-linfluence-peut-compenser-labsence-dautorite">4. L’influence peut compenser l’absence d’autorité</h3>
+<p>Même sans appui hiérarchique fort, il est possible de faire avancer un sujet complexe en s’appuyant sur :</p>
+<ul>
+<li>des relais fiables ;</li>
+<li>une compréhension fine des acteurs ;</li>
+<li>une capacité à rendre les problèmes visibles ;</li>
+<li>une animation opérationnelle régulière.</li>
+</ul>
+<h3 id="5-la-reconnaissance-ne-suit-pas-toujours-la-contribution">5. La reconnaissance ne suit pas toujours la contribution</h3>
+<p>Ce projet a également rappelé que la contribution réelle à la réussite d’un sujet n’est pas toujours visible spontanément.</p>
+<p>Il est donc nécessaire de documenter, tracer et rendre lisible la valeur produite.</p>
+<hr />
+<h2 id="ce-que-je-referais-differemment">Ce que je referais différemment</h2>
+<p>Si ce type de projet devait être repris aujourd’hui, les actions suivantes seraient engagées dès le démarrage :</p>
+<ul>
+<li>réaliser un diagnostic flash ;</li>
+<li>cartographier les dépendances critiques ;</li>
+<li>identifier les sachants uniques ;</li>
+<li>challenger les jalons de manière factuelle ;</li>
+<li>qualifier les besoins de développement ;</li>
+<li>installer plus tôt un mode task-force si le niveau d’incertitude est élevé.</li>
+</ul>
+<hr />
+<h2 id="citation-retex">Citation RETEX</h2>
+<blockquote>
+<p>La vitesse de traitement des blocages est souvent plus importante que la qualité du planning initial.</p>
+</blockquote>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+      
+    
+  </body>
+</html>
