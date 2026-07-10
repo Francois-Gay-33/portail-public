@@ -33,10 +33,14 @@ L'objectif n'était pas de réaliser une simple migration technique. Il s'agissa
 
 Cette trajectoire a permis :
 
-✔ la migration progressive des référentiels critiques DB2 vers PostgreSQL ;
+✔ la migration progressive des référentiels critiques DB2 vers PostgreSQL;
+
 ✔ l'extinction des composants Mainframe les plus sensibles ;
+
 ✔ la mise en place d'une stratégie d'historisation pérenne ;
+
 ✔ une économie annuelle estimée entre **9 et 10 M€** ;
+
 ✔ l'extinction définitive du Mainframe en **2026**.
 
 ---
@@ -97,26 +101,20 @@ Une partie du processus de generagtion des DDL reposait sur des traitements manu
 Cette phase constitue probablement le tournant du programme. L'analyse initiale montrait qu'une migration globale était trop risquée.
 La solution retenue a été de décomposer le problème en plusieurs sous-projets autonomes.
 
-### Lot 1
-#### Scission de la base
-
+### Lot 1 Scission de la base
 Séparation entre :
-
 - données actives ;
 - données d'historisation.
 
-### Lot 2
-#### Migration de la couche exposée
+### Lot 2 Migration de la couche exposée
 
 Découplage des consommateurs de données.
 
-### Lot 3
-#### Migration RNGD-H
+### Lot 3 Migration RNGD-H
 
 Migration du périmètre historique.
 
-### Lot 4
-#### Migration RNGD
+### Lot 4 Migration RNGD
 
 Migration du cœur du référentiel.
 
@@ -127,6 +125,8 @@ L'automatisation des DDL PostgreSQL à partir des métadonnées DB2 a permis :
 - une meilleure qualité ;
 - moins d'erreurs ;
 - une cadence de livraison supérieure.
+
+L'emploie de deux solutions techniques CDC et HPU/BulkLoad pour la dizaine de tables les plus volumineuses.
 
 ### Enseignement majeur
 
